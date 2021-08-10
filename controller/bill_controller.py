@@ -4,7 +4,7 @@ from sqlalchemy.exc import SQLAlchemyError
 
 # local imports
 from models.model import BillableHourModel, BillableHourSchema
-from flask_crud_mvc_work_project import db
+from app import db
 from collections import defaultdict
 
 
@@ -199,7 +199,7 @@ class GetBills:
 
 
 # from flask import request
-# from flask_crud_mvc_work_project import db
+# from app import db
 # # from models.Client import Client
 #
 #

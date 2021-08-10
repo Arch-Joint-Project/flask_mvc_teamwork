@@ -1,4 +1,4 @@
-from flask_crud_mvc_work_project import db, ma
+from app import db, ma
 # from flask_marshmallow import fields
 # from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, SQLAlchemySchema
 
@@ -62,7 +62,7 @@ class BillableHourSchema(ma.Schema):
 
 
 # # from flask_sqlalchemy import SQLAlchemy
-# from flask_crud_mvc_work_project import db
+# from app import db
 # # db = SQLAlchemy()
 #
 #

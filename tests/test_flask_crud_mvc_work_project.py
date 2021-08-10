@@ -1,4 +1,4 @@
-from flask_crud_mvc_work_project import __version__
+from app import __version__
 
 
 def test_version():
