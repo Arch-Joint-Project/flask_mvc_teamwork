@@ -1,14 +1,18 @@
 import os
 
+
+# configuration information
 class Config(object):
     TESTING = False
 
 
 class ProductionConfig(Config):
-    DATABASE_URI = 'mysql://user@localhost/foo'
+    # production database url
+    DATABASE_URI = 'sqlite:///:memory:'
 
 
 class DevelopmentConfig(Config):
+    # loading development url from .env file
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

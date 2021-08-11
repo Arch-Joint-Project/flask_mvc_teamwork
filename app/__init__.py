@@ -28,7 +28,7 @@ def create_app():
     from models import model
     migrate = Migrate(app, db)
 
-    # loading blueprints into applications
+    # loading blueprints into application
     from view.views import bills_blueprint
     app.register_blueprint(bills_blueprint)
 

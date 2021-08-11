@@ -1,6 +1,5 @@
+# local import
 from app import db, ma
-# from flask_marshmallow import fields
-# from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, SQLAlchemySchema
 
 
 class BillableHourModel(db.Model):
