@@ -1,28 +1,18 @@
 import os
 
-
 class Config(object):
-    """
-    Common configurations
-    """
-
-    # Put any configurations here that are common across all environments
-
-
-class DevelopmentConfig(Config):
-    """
-    Development configurations
-    """
-
-    DEBUG = True
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
-    SQLALCHEMY_TRACK_MODIFICATIONS = True
-    SQLALCHEMY_ECHO = True
+    TESTING = False
 
 
 class ProductionConfig(Config):
-    """
-    Production configurations
-    """
+    DATABASE_URI = 'mysql://user@localhost/foo'
 
-    DEBUG = False
+
+class DevelopmentConfig(Config):
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+
+class TestingConfig(Config):
+    DATABASE_URI = 'sqlite:///:memory:'
+    TESTING = True
